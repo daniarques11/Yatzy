@@ -9,9 +9,8 @@ class Yatzy:
 
     @staticmethod
     def yatzy(*dice):
-        for die in dice:
-            if dice.count(die) == len(dice):
-                return 50
+        if dice.count(dice[0]) == len(dice):
+            return 50
         return 0
         
     @staticmethod
