@@ -22,29 +22,23 @@ class Yatzy:
         return sum
 
     @staticmethod
-    def score_pair(*dices):
+    def score_pair(*dice):
         for number in range(6, 1, -1):
-            if dices.count(number) >= 2:
+            if dice.count(number) >= 2:
                 return number*2
         return 0
 
     @staticmethod
-    def two_pair(d1,  d2,  d3,  d4,  d5):
-        counts = [0]*6
-        counts[d1-1] += 1
-        counts[d2-1] += 1
-        counts[d3-1] += 1
-        counts[d4-1] += 1
-        counts[d5-1] += 1
-        n = 0
-        score = 0
-        for i in range(6):
-            if (counts[6-i-1] >= 2):
-                n = n+1
-                score += (6-i)
+    def two_pair(*dice):
+        numberOfPairs = 0
+        points = 0
+        for number in range(6, 1, -1):
+            if dice.count(number) >= 2:
+                numberOfPairs += 1
+                points += number*2
 
-        if (n == 2):
-            return score * 2
+        if (numberOfPairs >= 2):
+            return points
         else:
             return 0
 
