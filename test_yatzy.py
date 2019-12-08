@@ -27,13 +27,13 @@ def test_1s():
 
 
 def test_2s():
-    assert 4 == Yatzy.twos(1, 2, 3, 2, 6)
-    assert 10 == Yatzy.twos(2, 2, 2, 2, 2)
+    assert 4 == Yatzy.sameNumber(2, 1, 2, 3, 2, 6)
+    assert 10 == Yatzy.sameNumber(2, 2, 2, 2, 2, 2)
 
 
 def test_threes():
-    assert 6 == Yatzy.threes(1, 2, 3, 2, 3)
-    assert 12 == Yatzy.threes(2, 3, 3, 3, 3)
+    assert 6 == Yatzy.sameNumber(3, 1, 2, 3, 2, 3)
+    assert 12 == Yatzy.sameNumber(3, 2, 3, 3, 3, 3)
 
 
 def test_fours_test():
