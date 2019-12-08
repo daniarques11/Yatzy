@@ -29,7 +29,6 @@ class Yatzy:
         counts[d3-1] += 1
         counts[d4-1] += 1
         counts[d5-1] += 1
-        at = 0
         for at in range(6):
             if (counts[6-at-1] == 2):
                 return (6-at)*2
