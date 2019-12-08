@@ -22,10 +22,10 @@ class Yatzy:
         return sum
 
     @staticmethod
-    def score_pair(*dice):
+    def amountOfAKind(amount, *dice):
         for number in range(6, 1, -1):
-            if dice.count(number) >= 2:
-                return number*2
+            if dice.count(number) >= amount:
+                return number*amount
         return 0
 
     @staticmethod

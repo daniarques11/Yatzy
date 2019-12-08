@@ -55,10 +55,10 @@ def test_sixes():
 
 
 def test_one_pair():
-    assert 6 == Yatzy.score_pair(3, 4, 3, 5, 6)
-    assert 10 == Yatzy.score_pair(5, 3, 3, 3, 5)
-    assert 12 == Yatzy.score_pair(5, 3, 6, 6, 5)
-    assert 12 == Yatzy.score_pair(5, 3, 6, 6, 6)
+    assert 6 == Yatzy.amountOfAKind(2, 3, 4, 3, 5, 6)
+    assert 10 == Yatzy.amountOfAKind(2, 5, 3, 3, 3, 5)
+    assert 12 == Yatzy.amountOfAKind(2, 5, 3, 6, 6, 5)
+    assert 12 == Yatzy.amountOfAKind(2, 5, 3, 6, 6, 6)
 
 
 def test_two_Pair():
