@@ -23,7 +23,7 @@ class Yatzy:
 
     @staticmethod
     def amountOfAKind(amount, *dice):
-        for number in range(6, 1, -1):
+        for number in range(6, 0, -1):
             if dice.count(number) >= amount:
                 return number*amount
         return 0
@@ -32,7 +32,7 @@ class Yatzy:
     def two_pair(*dice):
         numberOfPairs = 0
         points = 0
-        for number in range(6, 1, -1):
+        for number in range(6, 0, -1):
             if dice.count(number) >= 2:
                 numberOfPairs += 1
                 points += number*2
@@ -62,12 +62,12 @@ class Yatzy:
         points = 0
         for die in dice:
             diceList.append(die)
-        for number in range(6, 1, -1):
+        for number in range(6, 0, -1):
             if diceList.count(number) >= 3:
                 points += number*3
                 while number in diceList:
                     diceList.remove(number)
-        for number in range(6, 1, -1):
+        for number in range(6, 0, -1):
             if diceList.count(number) >= 2:
                 points += number*2
         return points
