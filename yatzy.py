@@ -62,12 +62,19 @@ class Yatzy:
         points = 0
         for die in dice:
             diceList.append(die)
+        threeOfAKindExists = False
         for number in range(6, 0, -1):
             if diceList.count(number) >= 3:
                 points += number*3
                 while number in diceList:
                     diceList.remove(number)
+                threeOfAKindExists = True
+        pairExists = False
         for number in range(6, 0, -1):
             if diceList.count(number) >= 2:
                 points += number*2
-        return points
+                pairExists = True
+        if pairExists and threeOfAKindExists:
+            return points
+        else:
+            return 0

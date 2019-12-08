@@ -88,12 +88,14 @@ def test_two_Pair():
     assert 16 == Yatzy.two_pair(3, 3, 5, 4, 5)
     assert 18 == Yatzy.two_pair(3, 3, 6, 6, 6)
     assert 0 == Yatzy.two_pair(3, 3, 6, 5, 4)
+    assert 0 == Yatzy.two_pair(1, 1, 6, 5, 4)
 
 
 def test_smallStraight():
     assert 15 == Yatzy.smallStraight(1, 2, 3, 4, 5)
     assert 15 == Yatzy.smallStraight(2, 3, 4, 5, 1)
     assert 0 == Yatzy.smallStraight(1, 2, 2, 4, 5)
+    assert 15 == Yatzy.smallStraight(1, 2, 2, 4, 5, 5, 6, 2, 3)
 
 
 def test_largeStraight():
@@ -105,3 +107,6 @@ def test_largeStraight():
 def test_fullHouse():
     assert 18 == Yatzy.fullHouse(6, 2, 2, 2, 6)
     assert 0 == Yatzy.fullHouse(2, 3, 4, 5, 6)
+    assert 8 == Yatzy.fullHouse(1, 1, 2, 2, 2)
+    assert 0 == Yatzy.fullHouse(2, 2, 3, 3, 4)
+    assert 0 == Yatzy.fullHouse(4, 4, 4, 4, 4)
