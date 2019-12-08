@@ -43,15 +43,15 @@ def test_fours_test():
 
 
 def test_fives():
-    assert 10 == Yatzy(4, 4, 4, 5, 5).fives()
-    assert 15 == Yatzy(4, 4, 5, 5, 5).fives()
-    assert 20 == Yatzy(4, 5, 5, 5, 5).fives()
+    assert 10 == Yatzy.sameNumber(5, 4, 4, 4, 5, 5)
+    assert 15 == Yatzy.sameNumber(5, 4, 4, 5, 5, 5)
+    assert 20 == Yatzy.sameNumber(5, 4, 5, 5, 5, 5)
 
 
 def test_sixes_test():
-    assert 0 == Yatzy(4, 4, 4, 5, 5).sixes()
-    assert 6 == Yatzy(4, 4, 6, 5, 5).sixes()
-    assert 18 == Yatzy(6, 5, 6, 6, 5).sixes()
+    assert 0 == Yatzy.sameNumber(6, 4, 4, 4, 5, 5)
+    assert 6 == Yatzy.sameNumber(6, 4, 4, 6, 5, 5)
+    assert 18 == Yatzy.sameNumber(6, 6, 5, 6, 6, 5)
 
 
 def test_one_pair():
