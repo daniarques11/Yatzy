@@ -4,14 +4,14 @@ from yatzy import Yatzy
 # available from http://pytest.org/
 
 
-def test_chance_scores_sum_of_all_dice():
+def test_chance():
     expected = 15
     actual = Yatzy.chance(2, 3, 4, 5, 1)
     assert expected == actual
     assert 16 == Yatzy.chance(3, 3, 4, 5, 1)
 
 
-def test_yatzy_scores_50():
+def test_yatzy():
     expected = 50
     actual = Yatzy.yatzy(4, 4, 4, 4, 4)
     assert expected == actual
@@ -54,7 +54,7 @@ def test_sixes():
     assert 18 == Yatzy.sameNumber(6, 6, 5, 6, 6, 5)
 
 
-def test_one_pair():
+def test_pair():
     assert 6 == Yatzy.amountOfAKind(2, 3, 4, 3, 5, 6)
     assert 10 == Yatzy.amountOfAKind(2, 5, 3, 3, 3, 5)
     assert 12 == Yatzy.amountOfAKind(2, 5, 3, 6, 6, 5)
