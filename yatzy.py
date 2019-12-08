@@ -44,14 +44,10 @@ class Yatzy:
 
     @staticmethod
     def smallStraight(*dice):
-        isStraight = True
         for number in range(1, 5):
             if number not in dice:
-                isStraight = False
-        if isStraight is True:
-            return 15
-        else:
-            return 0
+                return 0
+        return 15
 
     @staticmethod
     def largeStraight(d1,  d2,  d3,  d4,  d5):
