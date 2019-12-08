@@ -19,14 +19,14 @@ def test_yatzy_scores_50():
     assert 0 == Yatzy.yatzy(6, 6, 6, 6, 3)
 
 
-def test_1s():
+def test_ones():
     assert Yatzy.sameNumber(1, 1, 2, 3, 4, 5) == 1
     assert 2 == Yatzy.sameNumber(1, 1, 2, 1, 4, 5)
     assert 0 == Yatzy.sameNumber(1, 6, 2, 2, 4, 5)
     assert 4 == Yatzy.sameNumber(1, 1, 2, 1, 1, 1)
 
 
-def test_2s():
+def test_twos():
     assert 4 == Yatzy.sameNumber(2, 1, 2, 3, 2, 6)
     assert 10 == Yatzy.sameNumber(2, 2, 2, 2, 2, 2)
 
@@ -36,7 +36,7 @@ def test_threes():
     assert 12 == Yatzy.sameNumber(3, 2, 3, 3, 3, 3)
 
 
-def test_fours_test():
+def test_fours():
     assert 12 == Yatzy.sameNumber(4, 4, 4, 4, 5, 5)
     assert 8 == Yatzy.sameNumber(4, 4, 4, 5, 5, 5)
     assert 4 == Yatzy.sameNumber(4, 4, 5, 5, 5, 5)
@@ -48,7 +48,7 @@ def test_fives():
     assert 20 == Yatzy.sameNumber(5, 4, 5, 5, 5, 5)
 
 
-def test_sixes_test():
+def test_sixes():
     assert 0 == Yatzy.sameNumber(6, 4, 4, 4, 5, 5)
     assert 6 == Yatzy.sameNumber(6, 4, 4, 6, 5, 5)
     assert 18 == Yatzy.sameNumber(6, 6, 5, 6, 6, 5)
