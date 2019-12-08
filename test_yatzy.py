@@ -5,16 +5,13 @@ from yatzy import Yatzy
 
 
 def test_chance():
-    expected = 15
-    actual = Yatzy.chance(2, 3, 4, 5, 1)
-    assert expected == actual
+    assert 15 == Yatzy.chance(2, 3, 4, 5, 1)
     assert 16 == Yatzy.chance(3, 3, 4, 5, 1)
 
 
 def test_yatzy():
-    expected = 50
-    actual = Yatzy.yatzy(4, 4, 4, 4, 4)
-    assert expected == actual
+    assert 50 == Yatzy.yatzy(4, 4, 4, 4, 4)
+
     assert 50 == Yatzy.yatzy(6, 6, 6, 6, 6)
     assert 0 == Yatzy.yatzy(6, 6, 6, 6, 3)
 
@@ -72,6 +69,7 @@ def test_four_of_a_knd():
     assert 20 == Yatzy.amountOfAKind(4, 5, 5, 5, 4, 5)
     assert 12 == Yatzy.amountOfAKind(4, 3, 3, 3, 3, 3)
     assert 0 == Yatzy.amountOfAKind(4, 3, 3, 3, 2, 1)
+
 
 def test_two_Pair():
     assert 16 == Yatzy.two_pair(3, 3, 5, 4, 5)
