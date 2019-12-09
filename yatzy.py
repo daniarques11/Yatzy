@@ -58,23 +58,23 @@ class Yatzy:
 
     @staticmethod
     def fullHouse(*dice):
-        diceList = []
-        points = 0
-        for die in dice:
-            diceList.append(die)
+        diceCountList = [0]*6
+        score = 0
         threeOfAKindExists = False
-        for number in range(6, 0, -1):
-            if diceList.count(number) >= 3:
-                points += number*3
-                while number in diceList:
-                    diceList.remove(number)
-                threeOfAKindExists = True
         pairExists = False
-        for number in range(6, 0, -1):
-            if diceList.count(number) >= 2:
-                points += number*2
+
+        for die in dice:
+            diceCountList[die-1] += 1
+
+        for dieMinusOne, dieCount in enumerate(diceCountList):
+            if dieCount == 3:
+                score += (dieMinusOne + 1) * 3
+                threeOfAKindExists = True
+            if dieCount == 2:
+                score += (dieMinusOne + 1) * 2
                 pairExists = True
+
         if pairExists and threeOfAKindExists:
-            return points
+            return score
         else:
             return 0
