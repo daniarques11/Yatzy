@@ -113,13 +113,13 @@ class Yatzy:
     @staticmethod
     def fullHouse(*dice):
         diceCountList = [0]*6
-        score = 0
-        threeOfAKindExists = False
-        pairExists = False
 
         for die in dice:
             diceCountList[die-1] += 1
 
+        score = 0
+        threeOfAKindExists = False
+        pairExists = False
         for dieMinusOne, dieCount in enumerate(diceCountList):
             if dieCount == 3:
                 score += (dieMinusOne + 1) * 3
