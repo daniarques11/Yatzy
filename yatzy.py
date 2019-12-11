@@ -62,10 +62,24 @@ class Yatzy:
         return sum
 
     @staticmethod
-    def amountOfAKind(amount, *dice):
+    def pair(*dice):
         for number in range(6, 0, -1):
-            if dice.count(number) >= amount:
-                return number*amount
+            if dice.count(number) >= 2:
+                return number*2
+        return 0
+
+    @staticmethod
+    def threeOfAKind(*dice):
+        for number in range(6, 0, -1):
+            if dice.count(number) >= 3:
+                return number*3
+        return 0
+
+    @staticmethod
+    def fourOfAKind(*dice):
+        for number in range(6, 0, -1):
+            if dice.count(number) >= 4:
+                return number*4
         return 0
 
     @staticmethod

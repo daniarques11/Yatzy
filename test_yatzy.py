@@ -57,30 +57,30 @@ def test_sixes():
 
 
 def test_pair():
-    assert 6 == Yatzy.amountOfAKind(2, 3, 4, 3, 5, 6)
-    assert 10 == Yatzy.amountOfAKind(2, 5, 3, 3, 3, 5)
-    assert 12 == Yatzy.amountOfAKind(2, 5, 3, 6, 6, 5)
-    assert 12 == Yatzy.amountOfAKind(2, 5, 3, 6, 6, 6)
-    assert 8 == Yatzy.amountOfAKind(2, 3, 3, 3, 4, 4)
-    assert 12 == Yatzy.amountOfAKind(2, 1, 1, 6, 2, 6)
-    assert 6 == Yatzy.amountOfAKind(2, 3, 3, 3, 4, 1)
-    assert 6 == Yatzy.amountOfAKind(2, 3, 3, 3, 3, 1)
-    assert 2 == Yatzy.amountOfAKind(2, 1, 1, 3, 4, 5)
+    assert 6 == Yatzy.pair(3, 4, 3, 5, 6)
+    assert 10 == Yatzy.pair(5, 3, 3, 3, 5)
+    assert 12 == Yatzy.pair(5, 3, 6, 6, 5)
+    assert 12 == Yatzy.pair(5, 3, 6, 6, 6)
+    assert 8 == Yatzy.pair(3, 3, 3, 4, 4)
+    assert 12 == Yatzy.pair(1, 1, 6, 2, 6)
+    assert 6 == Yatzy.pair(3, 3, 3, 4, 1)
+    assert 6 == Yatzy.pair(3, 3, 3, 3, 1)
+    assert 2 == Yatzy.pair(1, 1, 3, 4, 5)
 
 
 def test_three_of_a_kind():
-    assert 9 == Yatzy.amountOfAKind(3, 3, 3, 3, 4, 5)
-    assert 15 == Yatzy.amountOfAKind(3, 5, 3, 5, 4, 5)
-    assert 9 == Yatzy.amountOfAKind(3, 3, 3, 3, 3, 5)
-    assert 0 == Yatzy.amountOfAKind(3, 3, 3, 4, 5, 6)
+    assert 9 == Yatzy.threeOfAKind(3, 3, 3, 4, 5)
+    assert 15 == Yatzy.threeOfAKind(5, 3, 5, 4, 5)
+    assert 9 == Yatzy.threeOfAKind(3, 3, 3, 3, 5)
+    assert 0 == Yatzy.threeOfAKind(3, 3, 4, 5, 6)
 
 
 def test_four_of_a_kind():
-    assert 12 == Yatzy.amountOfAKind(4, 3, 3, 3, 3, 5)
-    assert 20 == Yatzy.amountOfAKind(4, 5, 5, 5, 4, 5)
-    assert 12 == Yatzy.amountOfAKind(4, 3, 3, 3, 3, 3)
-    assert 0 == Yatzy.amountOfAKind(4, 3, 3, 3, 2, 1)
-    assert 0 == Yatzy.amountOfAKind(4, 2, 2, 2, 5, 5)
+    assert 12 == Yatzy.fourOfAKind(3, 3, 3, 3, 5)
+    assert 20 == Yatzy.fourOfAKind(5, 5, 5, 4, 5)
+    assert 12 == Yatzy.fourOfAKind(3, 3, 3, 3, 3)
+    assert 0 == Yatzy.fourOfAKind(3, 3, 3, 2, 1)
+    assert 0 == Yatzy.fourOfAKind(2, 2, 2, 5, 5)
 
 
 def test_two_Pair():
