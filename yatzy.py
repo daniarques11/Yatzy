@@ -120,12 +120,12 @@ class Yatzy:
         score = 0
         threeOfAKindExists = False
         pairExists = False
-        for dieMinusOne, dieCount in enumerate(diceCountList):
+        for diePosition, dieCount in enumerate(diceCountList):
             if dieCount == 3:
-                score += (dieMinusOne + 1) * 3
+                score += (diePosition + 1) * 3
                 threeOfAKindExists = True
             if dieCount == 2:
-                score += (dieMinusOne + 1) * 2
+                score += (diePosition + 1) * 2
                 pairExists = True
 
         if pairExists and threeOfAKindExists:
