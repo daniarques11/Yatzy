@@ -19,41 +19,41 @@ def test_yatzy():
 
 
 def test_ones():
-    assert 1 == Yatzy.sameNumber(1, 1, 2, 3, 4, 5)
-    assert 2 == Yatzy.sameNumber(1, 1, 2, 1, 4, 5)
-    assert 0 == Yatzy.sameNumber(1, 6, 2, 2, 4, 5)
-    assert 4 == Yatzy.sameNumber(1, 1, 2, 1, 1, 1)
-    assert 0 == Yatzy.sameNumber(1, 3, 3, 3, 4, 5)
+    assert 1 == Yatzy.ones(1, 2, 3, 4, 5)
+    assert 2 == Yatzy.ones(1, 2, 1, 4, 5)
+    assert 0 == Yatzy.ones(6, 2, 2, 4, 5)
+    assert 4 == Yatzy.ones(1, 2, 1, 1, 1)
+    assert 0 == Yatzy.ones(3, 3, 3, 4, 5)
 
 
 def test_twos():
-    assert 4 == Yatzy.sameNumber(2, 1, 2, 3, 2, 6)
-    assert 10 == Yatzy.sameNumber(2, 2, 2, 2, 2, 2)
-    assert 4 == Yatzy.sameNumber(2, 2, 3, 2, 5, 1)
+    assert 4 == Yatzy.ones(2, 1, 2, 3, 2, 6)
+    assert 10 == Yatzy.ones(2, 2, 2, 2, 2, 2)
+    assert 4 == Yatzy.ones(2, 2, 3, 2, 5, 1)
 
 
 def test_threes():
-    assert 6 == Yatzy.sameNumber(3, 1, 2, 3, 2, 3)
-    assert 12 == Yatzy.sameNumber(3, 2, 3, 3, 3, 3)
+    assert 6 == Yatzy.ones(3, 1, 2, 3, 2, 3)
+    assert 12 == Yatzy.ones(3, 2, 3, 3, 3, 3)
 
 
 def test_fours():
-    assert 12 == Yatzy.sameNumber(4, 4, 4, 4, 5, 5)
-    assert 8 == Yatzy.sameNumber(4, 4, 4, 5, 5, 5)
-    assert 4 == Yatzy.sameNumber(4, 4, 5, 5, 5, 5)
-    assert 8 == Yatzy.sameNumber(4, 1, 1, 2, 4, 4)
+    assert 12 == Yatzy.ones(4, 4, 4, 4, 5, 5)
+    assert 8 == Yatzy.ones(4, 4, 4, 5, 5, 5)
+    assert 4 == Yatzy.ones(4, 4, 5, 5, 5, 5)
+    assert 8 == Yatzy.ones(4, 1, 1, 2, 4, 4)
 
 
 def test_fives():
-    assert 10 == Yatzy.sameNumber(5, 4, 4, 4, 5, 5)
-    assert 15 == Yatzy.sameNumber(5, 4, 4, 5, 5, 5)
-    assert 20 == Yatzy.sameNumber(5, 4, 5, 5, 5, 5)
+    assert 10 == Yatzy.ones(5, 4, 4, 4, 5, 5)
+    assert 15 == Yatzy.ones(5, 4, 4, 5, 5, 5)
+    assert 20 == Yatzy.ones(5, 4, 5, 5, 5, 5)
 
 
 def test_sixes():
-    assert 0 == Yatzy.sameNumber(6, 4, 4, 4, 5, 5)
-    assert 6 == Yatzy.sameNumber(6, 4, 4, 6, 5, 5)
-    assert 18 == Yatzy.sameNumber(6, 6, 5, 6, 6, 5)
+    assert 0 == Yatzy.ones(6, 4, 4, 4, 5, 5)
+    assert 6 == Yatzy.ones(6, 4, 4, 6, 5, 5)
+    assert 18 == Yatzy.ones(6, 6, 5, 6, 6, 5)
 
 
 def test_pair():

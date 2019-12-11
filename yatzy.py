@@ -14,11 +14,11 @@ class Yatzy:
         return 0
 
     @staticmethod
-    def sameNumber(dieCategory, *dice):
+    def ones(*dice):
         sum = 0
         for die in dice:
-            if die == dieCategory:
-                sum += dieCategory
+            if die == 1:
+                sum += 1
         return sum
 
     @staticmethod
