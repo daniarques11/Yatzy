@@ -14,11 +14,51 @@ class Yatzy:
         return 0
 
     @staticmethod
-    def sameNumber(dieCategory, *dice):
+    def ones(*dice):
         sum = 0
         for die in dice:
-            if die == dieCategory:
-                sum += dieCategory
+            if die == 1:
+                sum += 1
+        return sum
+
+    @staticmethod
+    def twos(*dice):
+        sum = 0
+        for die in dice:
+            if die == 2:
+                sum += 2
+        return sum
+
+    @staticmethod
+    def threes(*dice):
+        sum = 0
+        for die in dice:
+            if die == 3:
+                sum += 3
+        return sum
+
+    @staticmethod
+    def fours(*dice):
+        sum = 0
+        for die in dice:
+            if die == 4:
+                sum += 4
+        return sum
+
+    @staticmethod
+    def fives(*dice):
+        sum = 0
+        for die in dice:
+            if die == 5:
+                sum += 5
+        return sum
+
+    @staticmethod
+    def sixes(*dice):
+        sum = 0
+        for die in dice:
+            if die == 6:
+                sum += 6
         return sum
 
     @staticmethod
