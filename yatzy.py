@@ -83,7 +83,7 @@ class Yatzy:
         return 0
 
     @staticmethod
-    def two_pair(*dice):
+    def twoPair(*dice):
         numberOfPairs = 0
         points = 0
         for number in range(6, 0, -1):
